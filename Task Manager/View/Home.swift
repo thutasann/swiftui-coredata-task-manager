@@ -18,6 +18,8 @@ struct Home: View {
         
         ScrollView(.vertical, showsIndicators: false){
             VStack{
+                
+                // MARK: Header Texts
                 VStack (alignment: .leading, spacing: 8){
                     Text("Welcome Back")
                         .font(.callout)
@@ -26,10 +28,47 @@ struct Home: View {
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
                 
+                // MARK: Custom Segmented Bar
                 CustomSegmentedBar()
+                    .padding(.top, 5)
+                
+                // MARK: Task View
+                
+                
             }
             .padding()
         }
+        .overlay(alignment: .bottom){
+            // MARK: Add Button
+            Button{
+                
+            } label: {
+                Label{
+                    Text("Add Task")
+                        .font(.callout)
+                        .fontWeight(.semibold)
+                } icon: {
+                    Image(systemName: "plus.app.fill")
+                }
+                .foregroundColor(.white)
+                .padding(.vertical, 12)
+                .padding(.horizontal)
+                .background(.black, in: Capsule())
+            }
+            // MARK: Linear Gradient BG
+            .padding(.top, 10)
+            .frame(maxWidth: .infinity)
+            .background{
+                LinearGradient(colors: [
+                    .white.opacity(0.05),
+                    .white.opacity(0.4),
+                    .white.opacity(0.7),
+                    .white
+                ], startPoint: .top, endPoint: .bottom)
+                .ignoresSafeArea()
+            }
+        }
+        
     }
     
     // MARK: - Custom Segmented Bar
