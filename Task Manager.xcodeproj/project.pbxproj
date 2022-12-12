@@ -98,6 +98,8 @@
 		6BC8D97A2947785D00814F03 /* Task Manager */ = {
 			isa = PBXGroup;
 			children = (
+				6BC8D9AB29477A4800814F03 /* ViewModel */,
+				6BC8D9AA29477A4300814F03 /* View */,
 				6BC8D97B2947785D00814F03 /* Task_ManagerApp.swift */,
 				6BC8D97D2947785D00814F03 /* ContentView.swift */,
 				6BC8D97F2947785F00814F03 /* Assets.xcassets */,
@@ -131,6 +133,20 @@
 				6BC8D99D2947785F00814F03 /* Task_ManagerUITestsLaunchTests.swift */,
 			);
 			path = "Task ManagerUITests";
+			sourceTree = "<group>";
+		};
+		6BC8D9AA29477A4300814F03 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6BC8D9AB29477A4800814F03 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
