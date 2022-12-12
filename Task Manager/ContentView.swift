@@ -8,11 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
-
     var body: some View {
-        Text("LLL")
+        NavigationView{
+            Home()
+                .navigationBarTitle("Task Manager")
+                .navigationBarTitleDisplayMode(.inline)
+        }
     }
-
 }
 
 struct ContentView_Previews: PreviewProvider {
