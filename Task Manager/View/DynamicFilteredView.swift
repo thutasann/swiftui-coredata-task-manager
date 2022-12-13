@@ -31,18 +31,23 @@ struct DynamicFilteredView<Content : View, T>: View where T : NSManagedObject {
             // 0 - false, 1 - true
             predicate = NSPredicate(format: "\(filterKey) >= %@ AND \(filterKey) < %@ AND isCompleted == %i", argumentArray: [today, tomorrow, 0])
             
-        } else if currentTab == "Upcoming"{
+        }
+        else if currentTab == "Upcoming"{
             
             let today = calendar.startOfDay(for: calendar.date(byAdding: .day, value: 1, to: Date())!)
             let tomorrow = Date.distantFuture
             let filterKey = "deadline"
-            
-         
             predicate = NSPredicate(format: "\(filterKey) >= %@ AND \(filterKey) < %@ AND isCompleted == %i", argumentArray: [today, tomorrow, 0])
-            
-            
-        } else{
-            
+        
+        }
+        else if currentTab == "Failed"{
+            let today = calendar.startOfDay(for: Date())
+            let past = Date.distantPast
+            let filterKey = "deadline"
+            predicate = NSPredicate(format: "\(filterKey) >= %@ AND \(filterKey) < %@ AND isCompleted == %i", argumentArray: [past, today, 0])
+        }
+        else{
+            predicate = NSPredicate(format: "isCompleted == %i", argumentArray: [1])
         }
         
         
