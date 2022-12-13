@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B1C842029483E1C004CA252 /* DynamicFilteredView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1C841F29483E1C004CA252 /* DynamicFilteredView.swift */; };
 		6BC8D97C2947785D00814F03 /* Task_ManagerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC8D97B2947785D00814F03 /* Task_ManagerApp.swift */; };
 		6BC8D97E2947785D00814F03 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC8D97D2947785D00814F03 /* ContentView.swift */; };
 		6BC8D9802947785F00814F03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BC8D97F2947785F00814F03 /* Assets.xcassets */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6B1C841F29483E1C004CA252 /* DynamicFilteredView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicFilteredView.swift; sourceTree = "<group>"; };
 		6BC8D9782947785D00814F03 /* Task Manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Task Manager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BC8D97B2947785D00814F03 /* Task_ManagerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task_ManagerApp.swift; sourceTree = "<group>"; };
 		6BC8D97D2947785D00814F03 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 			children = (
 				6BC8D9AC29477CE800814F03 /* Home.swift */,
 				6BC8D9B02947894E00814F03 /* AddNewTask.swift */,
+				6B1C841F29483E1C004CA252 /* DynamicFilteredView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -291,6 +294,7 @@
 				6BC8D9852947785F00814F03 /* Persistence.swift in Sources */,
 				6BC8D9AF294780B900814F03 /* TaskViewModel.swift in Sources */,
 				6BC8D97E2947785D00814F03 /* ContentView.swift in Sources */,
+				6B1C842029483E1C004CA252 /* DynamicFilteredView.swift in Sources */,
 				6BC8D9AD29477CE800814F03 /* Home.swift in Sources */,
 				6BC8D9B12947894F00814F03 /* AddNewTask.swift in Sources */,
 				6BC8D9882947785F00814F03 /* Task_Manager.xcdatamodeld in Sources */,

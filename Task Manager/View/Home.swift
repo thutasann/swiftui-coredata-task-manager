@@ -55,7 +55,8 @@ struct Home: View {
             // MARK: Add Button
             Button{
                 taskModel.openEditTask.toggle()
-            } label: {
+            }
+            label: {
                 Label{
                     Text("Add Task")
                         .font(.callout)
@@ -126,7 +127,9 @@ struct Home: View {
     @ViewBuilder
     func TaskVIew() -> some View{
         LazyVStack (spacing: 20){
-            ForEach(tasks) { task in
+            
+            // MARK: Custom Filtered Request View
+            DynamicFilteredView(currentTab: taskModel.currentTab) { (task: Task) in
                 TaskRowView(task: task)
             }
         }
@@ -152,7 +155,9 @@ struct Home: View {
                 // MARK: Edit Button Only For Non-completed Tasks
                 if !task.isCompleted{
                     Button{
-                        
+                        taskModel.editTask = task
+                        taskModel.openEditTask = true
+                        taskModel.setupTask()
                     } label: {
                         Image(systemName: "square.and.pencil")
                             .foregroundColor(.black)
@@ -186,7 +191,7 @@ struct Home: View {
                 
                 if !task.isCompleted{
                     Button{
-                        // MARK: Updating Core Data
+                        // MARK: Completing Core Data
                         task.isCompleted.toggle()
                         try? env.managedObjectContext.save()
                     } label: {
